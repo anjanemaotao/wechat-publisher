@@ -1,0 +1,30 @@
+=== 纯点击流程：输入群名 → 点进群 → 点… → 点群二维码（只截最后一张图）===
+目标群名：AI 手机交流群-牙叔
+坐标：群聊行(177, 135)  搜索框(239, 57)  「…」(2527, 53)  群二维码(2433, 751)
+截图区域：左上(1011, 513) → 右下(1279, 859)  =  268x346  （来源：config.json）
+
+[1] 置前微信（整个流程只做这一次）…
+    ✓ FOCUSED  2576x1408
+[2] 点搜索框 (239, 57) 并粘贴群名…
+    ✓ SEARCHED
+[3] 点群聊行 (177, 135)…
+    ✓ CLICKED (177,135)
+[4] 点右上角「…」(2527, 53) 打开群资料面板…
+    ✓ CLICKED (2527,53)
+[5] 点「群二维码」(2433, 751)…
+    ✓ CLICKED (2433,751)
+
+---- 耗时明细 ----
+  ① AHK常驻启动                 720 ms
+  ② 置前                     1015 ms
+  ③ 置前后缓冲                   412 ms
+  ④ 粘贴+等搜索结果               2292 ms
+  ⑤ 点击+等进入                 1422 ms
+  ⑥ 点击「…」+等面板              1544 ms
+  ⑦ 点击群二维码+等渲染             2220 ms
+  ⑦ 截二维码弹窗                  118 ms
+  合计                      9743 ms  (9.7 秒)
+
+✅ 五步完成，二维码截图已保存：
+   D:\CToD\Users\Administrator\.workbuddy\skills\wechat-qrcode-yashu\output\qrcode.png
+   打印路径格式： OUTPUT_PATH=D:\CToD\Users\Administrator\.workbuddy\skills\wechat-qrcode-yashu\output\qrcode.png
