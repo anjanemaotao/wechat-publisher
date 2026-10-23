@@ -111,9 +111,7 @@ disable-model-invocation: false
 
 - 只写 `font-family: 'LXGW WenKai GB';`，后面不挂任何兜底。出现第二个字体名（`Noto Sans SC`、`Microsoft YaHei`、`SimSun`…）或通用关键字（`sans-serif`、`serif`、`monospace`、`system-ui`、`ui-monospace`）一律算违规。**不允许第二种字体，任何形式的"差不多"替代都不行。**
 - **用比例版**。`霞鹜文楷等宽 GB`（Mono）仅限代码编辑器 / 终端 / 日志面板：等宽版把拉丁字符撑成固定宽度，正文和界面会散、行宽浪费。
-- 字符对齐不靠换字体：用 `font-variant-numeric: tabular-nums`。
 - 只有 Light / Regular / Medium **三档，没有 Bold**。不写 `font-weight: 700+`（浏览器会合成假粗体，边缘发虚）；层级靠字号、字重（≤500）、颜色、字距。
-- 网页**禁止** `@font-face` 直引 `.ttf`（约 25MB，首屏必崩）：必须子集化转 `woff2` + `font-display: swap`，固定文案按实际用字切，通常几十 KB。桌面软件可直接把 ttf 打进 app 资源。
 
 ### 找不到字体 = 立刻停
 
@@ -124,8 +122,6 @@ disable-model-invocation: false
 ### 授权（SIL OFL 1.1，防侵权）
 
 - 可免费商用；可嵌入软件 / 文档 / 网页分发；可原样再分发（附 `OFL.txt`）。**不可单独售卖字体文件。**
-- 保留字体名 `霞鹜`、`霞鶩`、`落霞孤鹜`、`落霞孤鶩`、`LXGW`。官方额外许可：不改源码仅重编译，或**仅为网页投递做子集化 / 转 WOFF2**，可继续沿用这些名字。
-- **禁区**：改过源码或做过子集化的版本，不得做成**可安装的桌面字体**外发（发字体平台、塞进安装包让用户装进系统字体目录），必须改名。
 
 > 本机现状（2026-10 核实）：v1.530，用户级安装于 `%LOCALAPPDATA%\Microsoft\Windows\Fonts`，6 个文件（比例版与 Mono 版各 Light / Regular / Medium）。
 
@@ -134,6 +130,7 @@ disable-model-invocation: false
 - **输出偶发被吞**：命令零输出或空返回时，重定向到文件再读确认（bash `> out.txt 2>&1`；pwsh `*> out.txt`）。
   **不干等、不反复重试同一条命令**；判断成败看**副作用**（文件是否生成、端口是否监听）。
 - 声称完成前，先验证副作用是否真的产生，不要凭"命令没报错"就下结论。
+
 
 ````
 
