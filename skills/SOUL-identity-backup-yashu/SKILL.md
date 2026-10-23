@@ -1,5 +1,5 @@
 ---
-name: identity-backup-yashu
+name: SOUL-identity-backup-yashu
 description: 身份文件离线备份与按需取出。技能文档内冻结了 IDENTITY.md / SOUL.md / USER.md 三份原文的完整副本，此技能唯一作用是：当用户显式要求时，把这三份原文原样发给用户。仅当用户明确说出『读取身份』『读取身份文件』『读一下身份』『我的身份文件』等显式口令时才允许调用。严禁被其他技能、子代理、自动化任务或日常对话自动调用、引用或当作上下文来源。
 disable-model-invocation: false
 ---
